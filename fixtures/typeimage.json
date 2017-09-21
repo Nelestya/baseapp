@@ -1,0 +1,22 @@
+[
+  {
+    "model": "baseapp.typeimage",
+    "pk":"caroussel",
+    "fields":{
+        
+    }
+  },
+  {
+    "model": "baseapp.typeimage",
+    "pk":"commercialhome",
+    "fields":{
+      
+    }
+  },
+  {
+   "model": "baseapp.typeimage",
+   "pk":"commercial",
+   "fields":{
+    }
+  }
+]

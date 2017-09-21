@@ -1,0 +1,20 @@
+{% load static %}
+{% block header %}
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="icon" type="{% static "image/icone.png"%}" href="logo.png" />
+      <title>{{ header.name }}</title>
+      <meta name="description" content="{{ header.description }}" />
+      <meta name="author" content="{{ header.author }}">
+
+      <meta http-equiv="date" content="{{ header.date_pub }}">
+
+    <link rel="stylesheet" href="{% static "css/foundation.css" %}">
+    <link rel="stylesheet" href="{% static "css/app.css" %}">
+  </head>
+
+{% endblock %}

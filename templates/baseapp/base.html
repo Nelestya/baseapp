@@ -1,0 +1,19 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+ 
+ {% include "baseapp/head.html" %}
+  
+  <body>
+    
+    {% include "baseapp/navigation.html" %}
+    {% block content %}
+    {% endblock %}
+
+    {% include "baseapp/footer.html" %}
+  
+    {% include "baseapp/js.html" %}
+    
+  </body>
+</html>

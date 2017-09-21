@@ -1,0 +1,58 @@
+[
+  {
+    "model": "baseapp.image",
+    "pk":"1",
+    "fields":{
+      "name":"first",
+      "description":"premiere image",
+      "date_pub":"2017-09-14 14:32:51.466800+00:00",
+      "path":"https://placehold.it/2000x600&text",
+      "langue":"Fr_fr",
+      "application":"baseapp",
+      "typeimage":"caroussel"
+      
+    }
+  },
+  {
+    "model": "baseapp.image",
+    "pk":"2",
+    "fields":{
+      "name":"second",
+      "description":"seconde image",
+      "date_pub":"2017-09-14 14:32:51.466800+00:00",
+      "path":"https://placehold.it/2000x600&text",
+      "langue":"Fr_fr",
+      "application":"baseapp",
+      "typeimage":"caroussel"
+      
+    }
+  },
+  {
+    "model": "baseapp.image",
+    "pk":"3",
+    "fields":{
+      "name":"third",
+      "description":"troisieme image",
+      "date_pub":"2017-09-14 14:32:51.466800+00:00",
+      "path":"https://placehold.it/2000x600&text",
+      "langue":"Fr_fr",
+      "application":"baseapp",
+      "typeimage":"caroussel"
+      
+    }
+  },
+  {
+    "model": "baseapp.image",
+    "pk":"4",
+    "fields":{
+      "name":"first",
+      "description":"premiere image",
+      "date_pub":"2017-09-14 14:32:51.466800+00:00",
+      "path":"https://placehold.it/2000x600&text",
+      "langue":"Fr_fr",
+      "application":"baseapp",
+      "typeimage":"caroussel"
+      
+    }
+  }
+]

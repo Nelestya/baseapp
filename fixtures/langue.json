@@ -1,0 +1,22 @@
+[
+  {
+    "model": "baseapp.langue",
+    "pk":"Fr_fr",
+    "fields":{
+        
+    }
+  },
+  {
+    "model": "baseapp.langue",
+    "pk":"En_en",
+    "fields":{
+      
+    }
+  },
+  {
+   "model": "baseapp.langue",
+   "pk":"Pt_pt",
+   "fields":{
+    }
+  }
+]
