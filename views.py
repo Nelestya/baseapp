@@ -4,7 +4,7 @@ from django.views import View
 from .models import Application, Image
 # Create your views here.
 
-class Index_FR(View):
+class Home(View):
     application = "home"
     template_name = "baseapp/index.html"
     language = "Fr_fr"
