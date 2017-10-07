@@ -20,7 +20,7 @@ python3 manage.py migrate
 ``` 
 
 ## Motivation
-Objective is create easy a website
+Objective is create an easy website
 
 ## Installation
 
