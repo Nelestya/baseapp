@@ -1,6 +1,6 @@
 # Baseapp
 
-Baseapp is an application django for 
+Baseapp is an application django for django
 
 ### Prerequisites
 
