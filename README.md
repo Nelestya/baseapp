@@ -1,6 +1,6 @@
 # Baseapp
 
-Baseapp is an application django for django
+Baseapp is an application django for django,
 this app contain the framework **[Fundation](https://foundation.zurb.com/)** for the css and js
 
 ### Prerequisites
