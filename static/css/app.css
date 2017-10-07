@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(10,15,15);
+    color: white;
+}
+.bottomblock {
+    background-color: #1b2631;
+    color: white;
+}
+
+ul.menucolor > li > a {
+    color: white;
+}
+
