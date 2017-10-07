@@ -37,11 +37,11 @@ The goal is to create a website and the ability to learn and easily modify it
 ## Installation
 
 ```
-git clone https://github.com/Nelestya/tools.git
+git clone https://github.com/Nelestya/baseapp.git
 ```
 
 ## Authors
-* **Dlugosz Tristan** - *Initial work* - [baseapp](https://github.com/Nelestya/tools)
+* **Dlugosz Tristan** - *Initial work* - [baseapp](https://github.com/Nelestya/baseapp)
 
 ## License
 
