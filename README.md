@@ -4,7 +4,7 @@ Baseapp is an application django for
 
 ### Prerequisites
 
-django
+* **django**
 
 ```
 pip3 install Django
