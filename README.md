@@ -20,7 +20,7 @@ python3 manage.py migrate
 ``` 
 
 ## Motivation
-Objective is automatisation for many application in django or other project in python
+Objective is create easy a website
 
 ## Installation
 
