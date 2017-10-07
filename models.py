@@ -57,8 +57,7 @@ class Image(models.Model):
            'SectionImage',
            on_delete=models.CASCADE,)
 
-    def __str__(self):
-        return self.name
+
 
     def update_recent(self):
         """
@@ -72,13 +71,27 @@ class Image(models.Model):
         """
         return (datetime.now() - self.created).days < 30
 
+    def __str__(self):
+        return self.name
 
 
 
 class SectionImage(models.Model):
     name = models.CharField(max_length=50, primary_key=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
+    def update_recent(self):
+        """
+        return True if is updated recently
+        """
+        return (datetime.now() - self.updated).days < 30
 
+    def created_recent(self):
+        """
+        return True if is created recently
+        """
+        return (datetime.now() - self.created).days < 30
 
     def __str__(self):
         return self.name

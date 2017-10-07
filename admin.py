@@ -11,6 +11,7 @@ def export_as_json(modeladmin, request, queryset):
     response['Content-Disposition'] = 'attachment; filename={}.json'.format(opts.verbose_name)
     serializers.serialize("json", queryset, stream=response)
     return response
+
 export_as_json.short_description = 'Export to JSON'
 
 class ApplicationAdmin(admin.ModelAdmin):
@@ -28,8 +29,8 @@ class LangueAdmin(admin.ModelAdmin):
 admin.site.register(Langue, LangueAdmin)
 
 class SectionImageAdmin(admin.ModelAdmin):
-    list_display = ['name']
-    list_filter = ['name']
+    list_display = ['name', 'created', 'updated']
+    list_filter = ['name', 'created', 'updated']
     actions = [export_as_json]
 
 admin.site.register(SectionImage, SectionImageAdmin)
