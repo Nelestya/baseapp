@@ -41,7 +41,7 @@ git clone https://github.com/Nelestya/tools.git
 ```
 
 ## Authors
-* **Dlugosz Tristan** - *Initial work* - [tools](https://github.com/Nelestya/tools)
+* **Dlugosz Tristan** - *Initial work* - [baseapp](https://github.com/Nelestya/tools)
 
 ## License
 
