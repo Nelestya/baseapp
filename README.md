@@ -32,7 +32,7 @@ python3 manage.py migrate
 ``` 
 
 ## Motivation
-The goal is to create a website easily
+The goal is to create a website and the ability to learn and easily modify it
 
 ## Installation
 
