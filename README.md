@@ -2,6 +2,18 @@
 
 Baseapp is an application django for 
 
+### Prerequisites
+
+django
+
+```
+pip3 install Django
+```
+or
+```
+pip install Django
+```
+
 ## Getting Started
 add your file settings project the application baseapp
 and add urls.py in your project
