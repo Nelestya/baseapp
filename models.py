@@ -34,6 +34,7 @@ class Application(Recently):
     description = models.CharField(max_length=100)
     author = models.CharField(max_length=30)
     priority = models.IntegerField()
+    working = models.BooleanField()
 
 
     def __str__(self):
