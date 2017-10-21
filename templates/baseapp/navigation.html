@@ -6,7 +6,7 @@
     </button>
     </div>
     <ul class="vertical menu menucolor">
-{# list les application par piorité #}
+{# list the application with the piority #}
 {% for x in applications|dictsort:"priority" %}
         <li><a href="{% url 'baseapp:index' %}{{ x.pk }}">{{ x.pk }}</a></li>
 {% endfor %}
