@@ -3,6 +3,14 @@
 Baseapp is an application django for django,
 this app contain the framework **[Fundation](https://foundation.zurb.com/)** for the css and js
 
+### Documentation
+
+#### Front
+
+**[Front](https://github.com/Nelestya/baseapp/FRONT.md)**
+
+#### Back
+
 ### Prerequisites
 
 * **django**
@@ -16,6 +24,20 @@ pip install Django
 ```
 
 ## Getting Started
+create a virtual environement
+
+```
+python3 -m venv virtualenvname
+```
+
+create a django project in the virtualenvironement
+```
+django-admin startproject projectname
+```
+
+and install baseapp
+
+
 add your file settings project the application baseapp
 and add urls.py in your project
 
@@ -30,10 +52,10 @@ and use this command
 ```
 python3 manage.py makemigrations
 python3 manage.py migrate
-``` 
+```
 
 ## Motivation
-The goal is to create a website and the ability to learn and easily modify it
+The goal is to create a little component AMS(Assembler Management System) for django
 
 ## Installation
 
