@@ -15,18 +15,12 @@ def export_as_json(modeladmin, request, queryset):
 export_as_json.short_description = 'Export to JSON'
 
 class ApplicationAdmin(admin.ModelAdmin):
-    list_display = ['name', 'description', 'author', 'created', 'updated']
-    list_filter = ['name', 'author', 'created', 'updated']
+    list_display = ['name', 'created', 'updated']
+    list_filter = ['name', 'created', 'updated']
     actions = [export_as_json]
 
 admin.site.register(Application, ApplicationAdmin)
 
-class LangueAdmin(admin.ModelAdmin):
-    list_display = ['name']
-    list_filter = ['name']
-    actions = [export_as_json]
-
-admin.site.register(Langue, LangueAdmin)
 
 class SectionImageAdmin(admin.ModelAdmin):
     list_display = ['name', 'created', 'updated']
@@ -41,3 +35,10 @@ class ImageAdmin(admin.ModelAdmin):
     actions = [export_as_json]
 
 admin.site.register(Image, ImageAdmin)
+
+class BugReportAdmin(admin.ModelAdmin):
+    list_display = ['title', 'mail', 'created', 'updated', 'status']
+    list_filter = ['title', 'created', 'updated', 'mail', 'status']
+    actions = [export_as_json]
+
+admin.site.register(BugReport, BugReportAdmin)

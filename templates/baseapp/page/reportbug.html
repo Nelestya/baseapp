@@ -1,0 +1,21 @@
+{% extends 'baseapp/base.html' %}
+{% load static %}
+
+{% block header%}
+{% include "baseapp/head.html" %}
+{% endblock %}
+
+{% block content %}
+<h1>{{ fields.title }}</h1>
+{% if fields.message %}
+<h2>{{ fields.message }}</h2>
+{% endif %}
+
+{% if form_bugreport %}
+<form action="." method="post" id="formbug">
+    {{ form_bugreport.as_p }}
+    {% csrf_token %}
+    <button class="button large expanded" type="submit" form="formbug" value="send e-mail">report</button>
+</form>
+{% endif %}
+{% endblock %}
