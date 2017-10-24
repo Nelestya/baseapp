@@ -6,10 +6,14 @@
  {% include "baseapp/head.html" %}
  {% endblock %}
   <body>
+    {% block navigation %}
     {% include "baseapp/navigation.html" %}
+    {% endblock %}
     {% block content %}
     {% endblock %}
+    {% block footer %}
     {% include "baseapp/footer.html" %}
+    {% endblock %}
     {% include "baseapp/js.html" %}
   </body>
 </html>

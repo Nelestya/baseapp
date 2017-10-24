@@ -1,8 +1,8 @@
 from django.shortcuts import render , get_object_or_404
 from django.views import View
 
-from .forms import BugReportForm
-from .models import Application, Image, BugReport
+from .forms import BugReportForm, ContactUsForm
+from .models import Application, Image, BugReport, ContactUs
 # Create your views here.
 class FieldsView(View):
     applications = Application.objects.all()
@@ -11,11 +11,14 @@ class FieldsView(View):
     'title': '',
     'description':'',
     'author': 'Dlugosz Tristan',
+    'copyright': 'Nelestya(Dlugosz Tristan)',
     'langue':'en',
+    'keywords': 'Python, open-source',
     'meta':'',
     #END
     'message': '',
     'applications': applications,
+    'forms': None,
     }
 
 class Home(FieldsView):
@@ -44,14 +47,16 @@ class ReportBug(FieldsView):
     def get(self, request):
         self.fields['title'] = 'Report Bug'
         self.fields['description'] = 'It\'s page for report a bug'
-        form_bugreport = BugReportForm()
+        self.fields['forms'] = BugReportForm()
+        self.fields['message'] = None
+
         context = {
         'fields': self.fields,
-        'form_bugreport': form_bugreport,
         }
         return render(request, self.template_name, context)
 
     def post(self, request):
+
         form_bugreport = BugReportForm(request.POST)
         if form_bugreport.is_valid():
             try:
@@ -62,27 +67,47 @@ class ReportBug(FieldsView):
 
             except Exception as e:
                 flag = "Exception while processing. (%s)" % e
-
+        self.fields['forms'] = None
         context = {
         'fields': self.fields,
         }
 
-
         return render(request, self.template_name, context)
+
 
 class ContactUs(FieldsView):
     template_name = 'baseapp/page/contactus.html'
 
     def get(self, request):
         self.fields['title'] = 'Contact Us'
-        self.fields['description'] = 'It\'s page for contact a humane'
+        self.fields['description'] = 'It\'s page for contact us'
+        self.fields['forms'] = ContactUsForm()
+        self.fields['message'] = None
+
         context = {
         'fields': self.fields,
         }
         return render(request, self.template_name, context)
 
     def post(self, request):
-        pass
+
+        form_contact = ContactUsForm(request.POST)
+        if form_contact.is_valid():
+            try:
+                cf_cleaned = form_contact.cleaned_data
+                insert_db = ContactUs.objects.create(title=cf_cleaned['title'], mail=cf_cleaned['mail'], message=cf_cleaned['message'])
+                insert_db.save()
+                self.fields['message'] = 'Merci de nous avoir contacter'
+
+            except Exception as e:
+                flag = "Exception while processing. (%s)" % e
+        self.fields['forms'] = None
+        context = {
+        'fields': self.fields,
+        }
+
+        return render(request, self.template_name, context)
+
 
 class AboutUs(FieldsView):
     template_name = 'baseapp/page/aboutus.html'

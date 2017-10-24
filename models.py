@@ -68,3 +68,16 @@ class BugReport(Recently):
 
     def __str__(self):
         return self.title
+
+class ContactUs(Recently):
+    STATUS_CHOICE = (
+    ('read', 'Read'),
+    ('unread', 'Unread'),
+    )
+    title = models.CharField(max_length=50)
+    mail = models.EmailField()
+    message = models.TextField()
+    status = models.CharField(max_length=10, choices=STATUS_CHOICE, default='unread')
+
+    def __str__(self):
+        return self.title

@@ -6,14 +6,14 @@
 {% endblock %}
 
 {% block content %}
-<h1>{{ fields.title }}</h1>
+<h1 class="text-center">{{ fields.title }}</h1>
 {% if fields.message %}
 <h2>{{ fields.message }}</h2>
 {% endif %}
 
-{% if form_bugreport %}
+{% if fields.forms %}
 <form action="." method="post" id="formbug">
-    {{ form_bugreport.as_p }}
+    {{ fields.forms.as_p }}
     {% csrf_token %}
     <button class="button large expanded" type="submit" form="formbug" value="send e-mail">report</button>
 </form>
