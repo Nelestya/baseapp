@@ -24,7 +24,7 @@ admin.site.register(Application, ApplicationAdmin)
 
 class SectionImageAdmin(admin.ModelAdmin):
     list_display = ['name', 'created', 'updated']
-    list_filter = ['name', 'created', 'updated']
+    list_filter = ['created', 'updated']
     actions = [export_as_json]
 
 admin.site.register(SectionImage, SectionImageAdmin)

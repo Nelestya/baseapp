@@ -55,6 +55,7 @@ class SectionImage(Recently):
 
     def __str__(self):
         return self.name
+    
 
 class BugReport(Recently):
     STATUS_CHOICE = (
