@@ -6,16 +6,20 @@
 {% endblock %}
 
 {% block content %}
-<h1 class="text-center">{{ fields.title }}</h1>
-{% if fields.message %}
-<h2>{{ fields.message }}</h2>
-{% endif %}
 
-{% if fields.forms %}
-<form action="." method="post" id="formbug">
-    {{ fields.forms.as_p }}
-    {% csrf_token %}
-    <button class="button large expanded" type="submit" form="formbug" value="send e-mail">report</button>
-</form>
-{% endif %}
+  <div class="grid-container">
+    <h1 class="text-center">{{ fields.title }}</h1>
+    {% if fields.message %}
+      <h2>{{ fields.message }}</h2>
+    {% endif %}
+
+    {% if fields.forms %}
+      <form action="." method="post" id="formbug">
+        {{ fields.forms.as_p }}
+        {% csrf_token %}
+        <button class="button large expanded" type="submit" form="formbug" value="send e-mail">report</button>
+      </form>
+    {% endif %}
+  </div>
+
 {% endblock %}
