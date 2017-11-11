@@ -5,21 +5,28 @@ from .forms import BugReportForm, ContactUsForm
 from .models import Application, Image, BugReport, ContactUs
 # Create your views here.
 class FieldsView(View):
-    applications = Application.objects.all()
-    fields = {
-    #USE FOR HEADER
-    'title': '',
-    'description':'',
-    'author': 'Dlugosz Tristan',
-    'copyright': 'Nelestya(Dlugosz Tristan)',
-    'langue':'en',
-    'keywords': 'Python, open-source',
-    'meta':'',
-    #END
-    'message': '',
-    'applications': applications,
-    'forms': None,
-    }
+    def __init__(self):
+
+        try:
+            del self.fields
+        except:
+            pass
+        applications = Application.objects.all()
+        self.fields = {
+        #USE FOR HEADER
+        'title': '',
+        'description':'',
+        'author': 'Dlugosz Tristan',
+        'copyright': 'Nelestya(Dlugosz Tristan)',
+        'langue':'en',
+        'keywords': 'Python, open-source',
+        'meta':'',
+        #END
+        'message': '',
+        'applications': applications,
+        'forms': None,
+        }
+
 
 class Home(FieldsView):
     application = "home"
