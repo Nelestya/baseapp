@@ -4096,7 +4096,7 @@ select {
   transition: transform 0.5s ease;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  background: #1b2631 ;
+  background: #1A1F21 ;
   color: white;}
   [data-whatinput='mouse'] .off-canvas {
     outline: 0; }
@@ -5134,7 +5134,7 @@ a.thumbnail {
       flex-wrap: wrap; }
   .top-bar,
   .top-bar ul {
-    background-color: #1b2631 ;
+    background-color: #1A1F21 ;
     color: white}
   .top-bar input {
     max-width: 200px;
